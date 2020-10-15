@@ -26,8 +26,10 @@ public class EchoClient {
     int echoByte;
       while ((echoByte = System.in.read()) != -1) {
         output.write(echoByte);
+        System.out.write(echoByte);
+
+        //Flushing output and System.out because they are both outputs
         output.flush();
-        System.out.println(input.read());
         System.out.flush();
       }
 
